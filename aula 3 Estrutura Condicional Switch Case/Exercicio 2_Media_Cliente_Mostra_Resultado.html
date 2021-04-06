@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Faça um programa que solicite o nome de 3 clientes e 3 valores para cada cliente.<br>
+        Após capturar os valores,  faça a media do valor total. <br>
+
+     &nbsp; a. se​ media > 200, mostrar "Parabéns, sua média é maior que 100"<br>
+        
+     &nbsp; b. se​ media > 50  &&  media < 100, mostrar "Muito bem, você esta na media, vamos melhorar".<br>
+        
+     &nbsp; c. se​ media > 20  &&  media < 50​, mostrar "É, você precisa melhorar estamos aqui para te ajudar."<br> 
+        
+     &nbsp; d. se​ media < 20, mostrar "Cara, realmente é isso que você deseja? "</h2>
+     
+    <script>
+         
+         var cliente1 = (prompt("Digíte o nome do cliente 1"));
+         var sexo = prompt("Digite o sexo do clente1\nM para masculino\nF para feminino");
+         var s_Sexo = (sexo.trim().toUpperCase() == "M" ? "M" : "F");
+         var sexo_Mostra = (s_Sexo == "M" ? "do" : "da");
+         var valorCliente1 = Number(prompt("Digite o valor " + sexo_Mostra + " " + cliente1));
+         
+         var cliente2 = (prompt("Digíte o nome do cliente 2"));
+         var sexo = prompt("Digite o sexo do clente2\nM para masculino\nF para feminino");
+         var s_Sexo = (sexo.trim().toUpperCase() == "M" ? "M" : "F");
+         var sexo_Mostra = (s_Sexo == "M" ? "do" : "da");
+         var valorCliente2 = Number(prompt("Digíte valor " + sexo_Mostra + " " + cliente2));
+
+         var cliente3 = (prompt("Digíte o nome do cliente 3"));
+         var sexo = prompt("Digite o sexo do clente3\nM para masculino\nF para feminino");
+         var s_Sexo = (sexo.trim().toUpperCase() == "M" ? "M" : "F");
+         var sexo_Mostra = (s_Sexo == "M" ? "do" : "da");
+         var valorCliente3 = Number(prompt("Digíte valor " + sexo_Mostra + " " + cliente3));
+         
+         var media = parseFloat((valorCliente1 + valorCliente2 + valorCliente3)/3).toFixed(2);
+         debugger
+        if(media > 100){
+            alert("Parabéns, sua média é maior que 100 : " + media);
+         }
+         else if (media > 50 && media < 100){
+            alert("Muito você esta na media, vamos melhorar : " + media);
+         }
+         else if (media > 20 && media < 50){
+            alert("É, você precisa melhorar estamos aqui para te ajudar : " + media);
+         }
+         else{
+            alert("Cara, realmente é isso que você deseja?");
+         }
+         </script>
+</body>
+</html>
