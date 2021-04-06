@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+     debugger
+     var SomaNotas = 0   
+    Alunos = class {
+        constructor(){
+            this.nome = "";
+            this.matricula = "";
+            this.nota = [];            
+        }
+        media(){
+            SomaNotas = this.nota.reduce((x,y) => x+y);
+            return SomaNotas/this.nota.length;
+        }
+    }
+
+    rodrigo = new Alunos ();
+    rodrigo.nome = "Rodrigo";
+    rodrigo.matricula = "630493";
+    rodrigo.nota.push(parseInt(prompt("Digite a nota 1")));
+    rodrigo.nota.push(parseInt(prompt("Digite a nota 2")));
+    document.write("Nome : " + rodrigo.nome + "<br>" + "Notas : " + rodrigo.nota + "<br>" +  "média foi: " + rodrigo.media());
+
+</script> 
+</body>
+</html> 

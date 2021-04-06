@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POO</title>
+</head>
+<body>
+    <script>
+        debugger
+        Pessoa = class{
+            constructor(){
+                this.nome = ""
+                this.telefone = ""
+                this.cpf = ""
+                this.endereco = ""
+            }
+            
+            idenidade (){
+                document.write("Nome: " + this.nome + "<br>" + 
+                               "Telefone: " + this.telefone + "<br>" +
+                               "CPF: " + this.cpf +  "<br>" +
+                               "Endereço: " + this.endereco + "<br><br>");  
+                }       
+           } 
+
+           pessoa = new Pessoa ();
+           pessoa.nome = "Michele"
+           pessoa.telefone = 971233311
+           pessoa.cpf = 308357998-59
+           pessoa.endereco = "lkjlkjljlkj"
+           pessoa.idenidade();
+
+           pessoa1 = new Pessoa ();  
+           pessoa1.nome = "Rodrigo"
+           pessoa1.telefone = 972713312
+           pessoa1.cpf = 286625348-56
+           pessoa1.endereco = "dfsdfsdf"
+
+           
+           pessoa1.idenidade();
+    </script>
+</body>
+</html>

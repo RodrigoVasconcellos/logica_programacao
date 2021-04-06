@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POO</title>
+</head>
+<body>
+    <script>
+        debugger
+        Carro = class {
+            constructor (){
+                this.nome = "";
+                this.Roda  = "";
+                this.Volante  = "";
+                this.Painel  = "";
+            }
+            
+            Andar (){
+                alert("Estou andando")
+            }
+
+            Parar (){
+                alert("Estou parando")
+            }
+
+            Mostrar (){
+               for(var i=0; i<Carro.lista.length; i++){
+                document.write("Nome: " + Carro.lista[i].nome + "<br>" + "Painel: " + Carro.lista[i].painel + "<br>" +
+                               "Roda: " + Carro.lista[i].roda + "<br>" +
+                               "Volante: " + Carro.lista[i].volante + "<br><br>");
+        
+               }
+            }
+
+            static Todos (){
+                return Carro.lista
+            }
+        }
+
+        Carro.lista = [];
+
+
+        gol = new Carro ();
+        gol.nome = "Gol";
+        gol.painel = "Vermelho";
+        gol.roda = " De Borracha";
+        gol.volante = "Redondo";
+      
+        Carro.lista.push(gol);
+
+
+        uno = new Carro ();
+        uno.nome = "Uno";
+        uno.painel = "Vermelho";
+        uno.roda = " De Borracha";
+        uno.volante = "Redondo";
+        Carro.lista.push(uno);
+     
+        gol.Mostrar();
+                
+    </script>
+</body>
+</html>

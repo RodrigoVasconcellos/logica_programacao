@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POO</title>
+</head>
+<body>
+    <script>
+        Pessoa = class{
+            constructor(_nome, _telefone, _cpf){
+                this._nome = _nome
+                this._telefone = _telefone
+                this._cpf = _cpf
+            }
+            
+            andar (){
+                alert(this.nome);
+            }
+
+            falar (){
+                alert(this.telefone);
+            }
+
+            static comer (){
+                alert("Generico para todos")
+            }
+
+            get interna (){
+                alert(this.nome + " " + this.telefone);
+            }
+
+            publicInterna (){
+                this.interna();
+            }               
+        }
+
+    //=================OOP absoleto js (Antigo)======================
+
+        // pessoa = function (_nome, _telefone, _cpf){
+        //         this.nome = _nome
+        //         this.telefone = _telefone
+        //         this.cpf = _cpf
+            
+        //    this.andar = function (){
+        //         alert(this.nome);
+        //     }
+
+        //     this.falar = function (){
+        //         alert(this.telefone);
+        //     }
+
+        //     this.interna  = () =>{
+        //         alert(this.nome + " " + this.telefone);
+        //     }
+        //     this.publicInterna = () =>{
+        //       this.interna();
+        //     }
+        // }
+
+        // pessoa.prototype.comer = function (){
+        //     alert("Generico para todos")
+        // }
+        
+        // pessoa.comer = function (){
+        //     alert("Generico para todos")
+        // }
+
+    </script>
+</body>
+</html>
