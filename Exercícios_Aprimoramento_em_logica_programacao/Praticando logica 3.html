@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>
+
+        Solicitar 10 numeros; <br>
+        Array X; <br>
+
+        Se o número for menor ou igual a 0, gravar 1 no array; <br>
+
+       Saída: <br>
+        X [0] = 8; <br>
+        X [1] = 2; <br>
+        X [3] = 1; <br>
+        ... <br>
+        X [10] = 9; <br>
+    
+    </h2>
+    <script>
+        debugger
+         var numeros = []
+         
+
+        for(i = 0; i < 11; i++)
+         {
+              numeros [i] = parseFloat(prompt("Digite 10 números. "));
+              
+              if(numeros [i] <= 0)
+              {
+                  numeros [i] = 1
+              }
+             
+            }
+        
+        //     for(i = 0; i<numeros.length; i++){
+        //         document.write("Numeros [" + i + "] = " +  numeros[i] + "<br>");
+        // }
+        
+
+        numeros.forEach((numero) => {
+            document.write("Numeros [" + i + "] = " +  numero + "<br>");
+        })
+            
+
+    </script>
+</body>
+</html>

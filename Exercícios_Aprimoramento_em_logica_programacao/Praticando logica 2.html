@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>
+        1 = Alcool <br>
+        2 = Gasolina <br>
+        3 = Diesel <br>
+        4 - Sai <br>
+    
+    </h2>
+    <script>
+         
+         var produto = 0;
+         var alcool = 0;
+         var gasolina = 0; 
+         var diesel = 0;
+
+         do {
+            produto = parseInt(prompt("Digite o produto\n 1 - Alcool\n 2 - Gasolina\n 3 - Diesel\n 4 - Sair"));
+             debugger
+            switch(produto) {
+                case 1:
+                    alcool = alcool + 1;
+                    break;
+                case 2:
+                    gasolina = gasolina + 1;
+                    break;
+                case 3:
+                    diesel = diesel + 1;
+                    break;
+                case 4:
+                    break                    
+                    default:
+                    alert("opção inválida");
+                    break;
+                }
+            }
+                while (produto != 4){
+                    document.write("Muito obrigado!<br>" +
+                                   "alcool: " + alcool + "<br>" +
+                                   "gasolina: " + gasolina + "<br>" +
+                                   "diesel: " + diesel);
+                                }
+            
+
+    </script>
+</body>
+</html>
