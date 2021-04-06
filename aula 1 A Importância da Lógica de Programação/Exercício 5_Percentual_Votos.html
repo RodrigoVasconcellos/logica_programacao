@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>5.Escreva um algoritmo para ler o número total de eleitores de um município, 
+        o número de votos brancos, nulos e válidos. Calcular e escrever o percentual
+        que cada um representa em relação ao total de eleitores.</h1>
+
+        <script>
+            var eleitores = parseInt(prompt("Digite número de eleitores de um munícipio" ));
+            var brancos = parseInt(prompt("Digite número de votos brancos de um munícipio" ));
+            var nulos = parseInt(prompt("Digite número de votos nulos de um munícipio" ));
+            var validos = parseInt(prompt("Digite número de votos válidos de um munícipio" ));
+           
+            var porcemtagem1 = (brancos*100)/eleitores;
+            var porcemtagem2 = (nulos*100)/eleitores;
+            var porcemtagem3 = (validos*100)/eleitores;
+            document.write ("brancos: " + porcemtagem1 +  "%  nulos: " + porcemtagem2 + "% validos: " + porcemtagem3 +"%" ); 
+
+        </script>
+</body>
+</html>
