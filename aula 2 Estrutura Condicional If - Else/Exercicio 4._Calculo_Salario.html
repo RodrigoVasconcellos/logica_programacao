@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>4. Faça um algoritmo que calcule e imprima o desconto do salário de um funcionário, sabendo que:
+
+        a. se salário < R$ 1000, 00, desconto de 5% sobre o salário;
+        
+        b. se salário >= R$ 1000, 00 e <= R$2000,00, desconto de 10% sobre o salário;
+        
+        c. se salário > R$ 2000, 00, desconto de 15% sobre o salário</h2>
+
+
+        <script>
+             var salario  = parseInt(prompt("Digíte  o valor do salário"));
+             var desconto = 0
+
+             if(salario < 1000){
+                desconto = (salario*5)/100
+                 alert("desconto de 5% :" + (salario - desconto));
+             } else 
+             if((salario >= 1000) && (salario <= 2000)){
+                 desconto = (salario*10)/100
+                 alert("desconto de 10% :" + (salario - desconto));
+             }else 
+             if(salario > 2000){
+                desconto = (salario*15)/100
+                 alert("desconto de 15% :" + (salario - desconto));
+             }
+        </script>
+</body>
+</html>

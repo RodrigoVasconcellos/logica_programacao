@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>1. Meu cliente que fazer seu fluxo de caixa pessoal.
+         Sabendo que ele recebe todo dia 15 e dia 30 de cada mês seus gastos são:
+
+        Água - 40,00        
+        Luz - 50,00        
+        Internet -  80,00        
+        Cursos - 97,00        
+        Mercado - 800,00        
+        Aluguel -  1200,00
+
+        Faça o calculo que peça os valores que ele recebeu durante o mês e subtraia pelos seus gastos.
+        Se o valor for positivo escreva: " Parabéns! Vamos investir um pouco". Senão escreva: "Você esta ficando
+        com a conta negativa. Precisa fazer cortes e investir em educação para virar o jogo".</h2>
+
+    <script>
+       
+       var salarioAdiantamento  = parseInt(prompt("Digite volr do salário dia 15:"));
+       var salarioPagamento  = parseInt(prompt("Digite volr do salário dia 30:"));
+       var agua = 40.00
+       var luz = 50.00
+       var internet = 80.00
+       var cursos = 97.00
+       var mercado = 800.00
+       var aluguel = 1200.00
+       var total = salarioAdiantamento + salarioPagamento - agua - luz - internet - cursos - mercado - aluguel
+       
+        if(total >= 0 ){
+            alert("Parabéns! Vamos investir um pouco")
+        }
+        else{
+            alert("Você esta ficando com a conta negativa. Precisa fazer cortes e investir em sua educação para virar o jogo")
+        }
+    </script>
+</body>
+</html>

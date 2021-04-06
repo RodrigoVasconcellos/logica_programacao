@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Aqui vai o código HTML que fará seu site aparecer.</h2>
+
+    <script>
+     
+        horario = prompt("Digite o horário que você acordou:")
+        retorno = new Date("11/03/2020 " + horario) >= new Date("11/03/2020  05:00") && 
+                  new Date("11/03/2020 " + horario) <= new Date ("11/03/2020 05:59");
+        if(retorno){
+            alert("Parabéns você está acordado");
+        }
+        else{
+            alert("Infelizmente você perdeu esta aula");
+        }
+    </script>
+</body>
+</html>

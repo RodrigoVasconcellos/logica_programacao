@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>1. Faça um algoritmo que leia 2 números inteiros para as variáveis A e B. 
+        Caso A seja maior que B e B seja par, efetue a troca dos valores de forma que a variável A 
+        passe a conter o valor da variável B e, 
+        a variável B passe a conter o valor da variável se nâo soma valor de A com B.</h2>
+        <script>
+       
+            var a = parseInt(prompt("Digite 1 números inteiros"));
+            var b = parseInt(prompt("Digite 2 números inteiros"));
+
+            if((a > b) && (b % 2 === 0)) {
+                c = a
+                a = b 
+                b = c
+                               
+                alert("Valor de A: " + a + " Valor de B: " + b);
+                document.write("Valor de A: " + a + " Valor de B: " + b);
+                    
+            }else{
+
+                alert("Valor de A+b: " + (a + b));
+                document.write("Valor de A+b: " + (a + b));
+
+            }
+        </script>
+
+       
+</body>
+</html>

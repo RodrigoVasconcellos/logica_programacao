@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>5. Faça um algoritmo que efetue a leitura de três valores numéricos 
+        reais distintos e apresente os valores lidos em ordem crescente. </h2>
+
+        <script>
+            var a = parseInt(prompt("Digíte 1 numero inteiro"));
+            var b = parseInt(prompt("Digíte 2 numero inteiro"));
+            var c = parseInt(prompt("Digíte 2 numero inteiro"));
+            
+            var v1 = 0
+            var v2 = 0
+            var v3 = 0
+
+            if ((a < b) && (a < c)) {
+                v1 = a
+                if (b < c){
+                    v2 = b
+                    v3 = c
+                }else{
+                    v2 = c
+                    v3 = b
+                }
+            }else if ((b < a) && (b < c)){
+                v1 = b
+                if (a < c){
+                    v2 = a
+                    v3 = c
+                }else{
+                    v2 = c
+                    v3 = a
+                }
+            }else if ((c < b) && (c < a)){
+                v1 = c
+
+                if (a < b){
+                    v2 = a
+                    v3 = b
+                }else{
+                    v2 = b
+                    v3 = a
+                }
+            }
+
+            document.write("Valores lidos em ordem crescente: " + v1 + " " + v2 + " " + v3) 
+
+        </script>
+
+   
+</body>
+</html>
