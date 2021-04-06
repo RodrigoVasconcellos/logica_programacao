@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funções</title>
+</head>
+<body>
+    <h3>Faça um programa que traduza a função leia.<br>
+            Crie uma função chamada calculo expressão.<br>
+            ((x * y) + 85 - (10 * 8))<br>
+            Solicitar 2 números e mostrar o resultado final da operação.<br>
+            3 função.<br>
+            leia, mostre e calculo.<br></h3>
+    <script> 
+        debugger
+
+        /*FUNÇÕES*/
+       var leia = function(mensagem){
+        return (mensagem);
+       }
+
+       function calculo_expressão(x,y){
+           return ((x * y) + 85 - (10 * 8));
+       }
+       
+       var mostre = function(){
+           return ("calculo " + calculo_expressão(2,10));  
+       }
+
+       document.write(leia("Resultado da expressão.<br>"));
+       document.write(mostre());
+
+    </script> 

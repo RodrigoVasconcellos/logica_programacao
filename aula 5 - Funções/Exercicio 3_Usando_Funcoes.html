@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funções</title>
+</head>
+<body>
+    <script>
+        debugger
+        function mostra(mensagem){
+            alert(mensagem);
+            document.write(mensagem);
+        }
+        mostra("criando primeira função");
+             var mostra = function(mensagem){
+            alert(mensagem);
+            document.write(mensagem);
+        }
+        mostra("criando segunda função");
+             aluno = {
+            nome : "Danilo",
+            notas : [1,2],
+            media : function(){ return (aluno.notas[0] + aluno.notas[1]) / 2}
+        }
+        alert(aluno.media());
+        document.write(aluno.media());
+
+        cliente = {}
+        cliente.nome = "Meg"
+        cliente.notas = [3,2]
+        cliente.media = function(){ return ((cliente.notas[0] + cliente.notas[1]) / 2)}
+
+        alert(cliente.nome + cliente.notas + cliente.media());
+        document.write("Nome do cliente : " + cliente.nome + "<br>" + 
+                       "Notas dos clientes : " + cliente.notas + "<br>" +
+                       "Média dos clientes : " + cliente.media() + "<br>");
+
+        var leia = function(mensagem){
+            return prompt(mensagem);
+        }
+        alert (leia ("Digite seu nome"));
+
+        function calcula (x,y){
+            return x + y + (6 * 9) - 10 + 100;
+        }
+        alert (calcula (0,8));
+     
+    </script>
+</body>
+</html>

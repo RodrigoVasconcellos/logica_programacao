@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício de function</title>
+</head>
+<body>
+    <h3>Faça um programa que pergunte uma opção para o usuário.<br>
+    opção 1 = mostrar calculo da tabuada.<br>
+    opção 2 = mostrar média dos alunos.<br>
+    opção 3 = para sair do programa.<br>
+
+    O objetivo é ter um loop onde irar ficar perguntando para o usuário até ele digitar a opção 3 e sair do programa.
+    <br><hr></h3>
+    <Script>
+        debugger
+        var opcao = 0
+        var soma = 0
+        var notas = []
+
+        function tabuada (){
+            var numero = Number(prompt("Digite um número da tabuaba "));
+            for (i = 0; i <= 10; i++){
+                 document.write (numero + " x " + i + " = " + numero * i + "<br>");
+             }
+             document.write("<br>");
+         }
+         
+        
+        function mediaAlunos(){
+            var quantidadeAlunos = parseInt(prompt("Digite a quantidade de alunos "));
+            
+            for (i = 0; i < quantidadeAlunos; i++){
+                var nota = parseFloat(prompt("Digite a nota do aluno " + (i+1)));
+                notas.push(nota);              
+            }
+
+                for (i = 0; i < notas.length; i++){
+                     soma += notas[i];
+            
+                }
+               
+                var media = parseFloat(soma/notas.length).toFixed(2);
+                document.write("A media dos alunos é : " + media);
+        
+            }
+            
+            while(opcao != 3){
+                opcao = parseInt(prompt("Digite uma das opções abaixo\n 1 - Tabuada\n 2 - Meida\n 3 - Sair "))
+                switch (opcao) {
+                    case 1:
+                    tabuada();
+                        break;
+                    case 2:
+                    mediaAlunos()
+                        break;
+                    }
+            }
+            alert("Saindo do programa.")
+
+    </Script>
+
+</body>
+</html>
