@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funçoês Recursiva TABUADA</title>
+</head>
+<body>
+    <script>
+        debugger
+        function tabuaba(inicio_numero_tabuada, final_numero_tabuada, multiplicador){
+            
+            if(inicio_numero_tabuada > final_numero_tabuada){
+                return
+            }
+            document.write(inicio_numero_tabuada + " X " + multiplicador + " = " + (inicio_numero_tabuada * multiplicador) + "<br>");
+            
+            tabuaba(inicio_numero_tabuada + 1, final_numero_tabuada, multiplicador)
+         
+        }
+        var numero = Number(prompt("Digite o número da tabuada que você deseja.")); 
+             tabuaba(1, 10, numero);
+
+    </script>
+</body>
+</html>
