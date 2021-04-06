@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Faça um programa que solicite o nome de 3 clientes e 3 valores para cada cliente.<br>
+        Após capturar os valores,  faça a media do valor total. <br>
+
+     &nbsp; d. se​ media < 20, mostrar "Pessoal, mais realmente isto que vocês querem??. "</h2>
+
+     &nbsp; a. se​ media >= 100, mostrar "Parabéns, sua média é maior que 100. "<br>
+        
+     &nbsp; b. se​ media >= 50  &&  media < 100, mostrar "Muito bem, você esta na media, vamos melhorar. " <br>
+        
+     &nbsp; c. se​ media >= 20  &&  media < 50​, mostrar "A nossa recompensa está no esforço, não no resultdo. "<br> 
+       
+    <script>
+         debugger
+         var qtdCliente = 0 
+         var cliente = []
+         var Clientes = []
+         var valorCliente = []
+         var soma = 0
+   
+
+         qtdCliente = parseInt(prompt("Informe quantos clientes você quer cadastrar? "));
+
+         for(c = 0; c<qtdCliente; c++){
+          cliente[c] = (prompt("Digíte o nome dos clientes " + c));
+          var sexo = (prompt("Digite sexo do cliente\n M para Masculino \n F para Feminino"));
+          var Sexo_cliente = (sexo.trim().toUpperCase() == "M" ? "M" : "F");
+          var opcao_Sexo = (Sexo_cliente == "M" ? "do" : "da");
+          // valorCliente[c] = Number(prompt("Digíte valor " + opcao_Sexo + " " + cliente[c]));
+          // valorCliente[c] = Number(prompt("Digíte valor " + opcao_Sexo + " " + cliente[c]));
+
+          var umCliente = {
+            nome: cliente[c],
+            sexo: Sexo_cliente,
+            valor1: Number(prompt("Digíte valor " + opcao_Sexo + " " + cliente[c])),
+            valor2: Number(prompt("Digíte valor " + opcao_Sexo + " " + cliente[c])),
+            media: 0
+          }
+          Clientes.push(umCliente);
+
+        }
+                  
+        debugger
+        for(m = 0; m < Clientes.length; m++){
+          soma += Clientes[m].valor1 + Clientes[m].valor2;
+          Clientes[m].media = (Clientes[m].valor1 + Clientes[m].valor2)/2;
+        }
+
+        mediaTotal = parseFloat(soma/(qtdCliente*2)).toFixed(2);    
+        "<h4>"
+        document.write("<hr> A quantidade de pessoas que passaram pela pesquisa são : " + "<b>" + qtdCliente + "</b>");
+        document.write("<hr> A média dos participantes foi : " + "<b>" + mediaTotal + "</b>");
+        
+       
+        if(mediaTotal < 20){
+          document.write("<hr> Pessoal, mais realmente isto que vocês querem??. " );
+        }
+        else if (mediaTotal >= 20 && mediaTotal < 50){
+          document.write("<hr> A nossa recompensa está no esforço, não no resultdo. ");
+        }
+        else if (mediaTotal >= 50 && mediaTotal < 100){
+          document.write("<hr> Muito bem, você esta na media, vamos melhorar. ");
+        }
+        else {(mediaTotal >= 100)
+          document.write("<hr> Parabéns, sua média é maior que 100. ");
+        }
+
+        document.write("<hr> Nome de todos participantes : " + "<b><br><br>")
+
+        for(i = 0; i<Clientes.length; i++){
+          document.write("Nome: " + Clientes[i].nome + "<br>" + "Nota 1 : " + 
+                                    Clientes[i].valor1 + "<br>" + "Nota 2: " + 
+                                    Clientes[i].valor2 + "<br>" + "Media: " + 
+                                    Clientes[i].media + "<br><br>");
+        }
+      
+                
+    </script>
+</body>
+</html>

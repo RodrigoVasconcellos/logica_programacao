@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        debugger
+        var qtd_clientes = 0
+        var clientes = []
+        var SomaTodal = 0
+        var mediaTotal = 0
+
+        qtd_clientes = parseInt(prompt("Digite quantidade de clientes"));
+
+        for(i = 0; i<qtd_clientes; i++){
+            var cliente = {
+            nome : " ",
+            idade : " ",
+            adiantamento_pag : 0,
+            pagamento : 0,
+            soma: 0,
+            media : 0       
+        }
+            cliente.nome = (prompt("Cadrastre o nome do cliente"));
+            cliente.idade = (prompt("Cadrastre a idade do cliente"));
+            cliente.adiantamento_pag = Number(prompt("Cadrastre o adiantamento_pag do cliente"));
+            cliente.pagamento = Number(prompt("Cadrastre o pagamento do cliente"));
+            clientes.push(cliente);
+        }
+
+        for(i = 0; i<qtd_clientes; i++){
+            clientes[i].soma = (clientes[i].adiantamento_pag + clientes[i].pagamento);
+            SomaTodal += (clientes[i].soma);
+            clientes[i].media = parseFloat(clientes[i].soma /qtd_clientes).toFixed(2);  
+            
+            document.write("O Funcionário : " + clientes[i].nome + "<br>" +
+                           "Tem idade de " + clientes[i].idade + " anos<br>" +
+                           "Recebe vale dia 20 de R$ " + clientes[i].adiantamento_pag + "<br>" + 
+                           "Recebe pagamento dia 5 de R$ " + clientes[i].pagamento + "<br>" +
+                           "O Salário do funcionário é R$ " + clientes[i].soma + "<br>" +
+                           "Média do salário mês é R$ " + clientes[i].media + "<br><br>");
+
+                        }
+
+        mediaTotal = parseFloat(SomaTodal/(qtd_clientes)).toFixed(2);
+        document.write("Média de salário de todos funcionários mês é R$ " + mediaTotal + "<br>");
+       
+    </script>
+
+</body>
+</html>

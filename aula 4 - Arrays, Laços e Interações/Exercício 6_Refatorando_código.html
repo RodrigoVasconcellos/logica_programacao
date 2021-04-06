@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Faça um programa que solicite o nome de 3 clientes e 3 valores para cada cliente.<br>
+        Após capturar os valores,  faça a media do valor total. <br>
+        &nbsp; d. se​ media < 20, mostrar "Cara, realmente é isso que você deseja? "</h2>
+
+     &nbsp; a. se​ media >= 100, mostrar "Parabéns, sua média é maior que 100"<br>
+        
+     &nbsp; b. se​ media >= 50  &&  media < 100, mostrar "Muito bem, você esta na media, vamos melhorar".<br>
+        
+     &nbsp; c. se​ media >= 20  &&  media < 50​, mostrar "É, você precisa melhorar estamos aqui para te ajudar."<br> 
+        
+    
+    <script>
+         debugger
+         var qtdCliente = 0 
+         var cliente = []
+         var valorCliente = []
+         var soma2 = 0
+
+         qtdCliente = parseInt(prompt("Informe quantos cliente você quer cadastrar? "));
+         for(c = 0; c<qtdCliente; c++){
+         cliente[c] = (prompt("Digíte o nome do cliente " + c));
+         var sexo = (prompt("Digite sexo do cliente\n M para Masculino \n F para Feminino"));
+         var Sexo_cliente = (sexo.trim().toUpperCase() == "M" ? "M" : "F");
+         var opcao_Sexo = (Sexo_cliente == "M" ? "do" : "da");
+         valorCliente[c] = Number(prompt("Digíte valor " + opcao_Sexo + " " + cliente[c]));
+         }
+     
+      for(m = 0; m < valorCliente.length; m++){
+         soma2 += valorCliente[m];
+      }
+      mediaTotal = parseFloat(soma2/valorCliente.length).toFixed(2);
+       
+      debugger
+
+         if(mediaTotal < 20){
+            alert("Cara, realmente é isso que você deseja?");
+         }
+         else if (mediaTotal >= 20 && mediaTotal < 50){
+            alert("É, você precisa melhorar estamos aqui para te ajudar.");
+         }
+         else if (mediaTotal >= 50 && mediaTotal < 100){
+            alert("Muito bem, você esta na media, vamos melhorar.");
+         }
+         else if(mediaTotal >= 100){
+            alert("Parabéns, sua média é maior que 100.");
+         }
+         else{
+            alert("nenhuma das opçôes.");
+         }
+
+                
+    </script>
+</body>
+</html>
